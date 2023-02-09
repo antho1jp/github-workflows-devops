@@ -1,0 +1,13 @@
+name: Push Main Dispatcher
+# This dispatcher triggers on push of Main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-pr-to-dev:
+    uses: ./.github/workflows/create-pr-development.yaml
+    secrets: inherit
+    with:
+      SOME_INPUT: "Test Var Passing Data"
