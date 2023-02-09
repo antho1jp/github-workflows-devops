@@ -1,3 +1,4 @@
+# This blank workflow is placeholder for a build
 name: Build application example
 
 on:

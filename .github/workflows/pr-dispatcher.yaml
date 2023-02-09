@@ -6,7 +6,11 @@ on:
       - development
       - main
 
+  # checking to see if this is the magic
+  schedule:
+    - cron: "41 3 * * 2"
+
 jobs:
-  run-build:
+  run-tests:
     uses: ./.github/workflows/run-tests.yaml
     secrets: inherit
