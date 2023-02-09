@@ -1,23 +1,32 @@
 name: Creates a PR to the Development Branch
 
-on: workflow_call
+on:
+  workflow_call:
 
 jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mock Build App Step
+        run: echo "This is where the app would build"
+
   create-pr:
-    name: "Create PR to back merge to development"
-    uses: "actions/github-script@v6"
-    with:
-      github-token: "${{ secrets.GITHUB_TOKEN }}"
-      script: |
-        try {
-          await github.rest.pulls.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            title: "Merge main back into development",
-            body: "Created using Github Actions after release [${{steps.date.outputs.date}}](/ua-digital-commerce/ua-commerce-api/releases/tag/${{steps.date.outputs.date}})",
-            head: "main",
-            base: "development",
-          });
-        } catch (error) {
-          core.setFailed(error.message);
-        }
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Create PR to back merge to development"
+        uses: "actions/github-script@v6"
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          script: |
+            try {
+              await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: "Merge main back into development",
+                body: "Created using Github Actions after release [${{steps.date.outputs.date}}](/ua-digital-commerce/ua-commerce-api/releases/tag/${{steps.date.outputs.date}})",
+                head: "main",
+                base: "development",
+              });
+            } catch (error) {
+              core.setFailed(error.message);
+            }
