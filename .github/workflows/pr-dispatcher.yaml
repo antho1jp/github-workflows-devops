@@ -7,6 +7,6 @@ on:
       - main
 
 jobs:
-  run-build:
+  run-tests:
     uses: ./.github/workflows/run-tests.yaml
     secrets: inherit
