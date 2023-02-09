@@ -1,11 +1,11 @@
 name: Creates a PR to the Development Branch
 
-on: workflow_dispatch
+on: workflow_call
 
 jobs:
   create-pr:
     name: "Create PR to back merge to development"
-    uses: "actions/github-script@v5"
+    uses: "actions/github-script@v6"
     with:
       github-token: "${{ secrets.GITHUB_TOKEN }}"
       script: |

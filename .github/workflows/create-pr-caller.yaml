@@ -1,0 +1,11 @@
+# This example shows a Manual callable workflow through the Github UI
+name: Create PR Main to Development (dispatcher)
+
+on: workflow_dispatch
+
+jobs:
+  run-build:
+    uses: ./.github/workflows/create-pr-development.yaml
+    secrets: inherit
+    with:
+      SOME_INPUT: "Test Var Passing Data"
