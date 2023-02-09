@@ -27,7 +27,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: "Merge main back into development",
-                body: "Created using Github Actions after release [${{steps.date.outputs.date}}](/ua-digital-commerce/ua-commerce-api/releases/tag/${{steps.date.outputs.date}})",
+                body: "Created using Github Actions after release",
                 head: "main",
                 base: "development",
               });
