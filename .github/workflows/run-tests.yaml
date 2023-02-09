@@ -1,7 +1,6 @@
 name: Run Tests Mock
 
-on:
-  workflow_call:
+on: workflow_call
 
 jobs:
   run-test-job:
