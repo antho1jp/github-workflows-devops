@@ -8,5 +8,3 @@ jobs:
   create-pr:
     uses: ./.github/workflows/create-pr-development.yaml
     secrets: inherit
-    with:
-      SOME_INPUT: "Test Var Passing Data"

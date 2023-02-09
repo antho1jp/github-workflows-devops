@@ -3,10 +3,6 @@ name: Build application example
 
 on:
   workflow_call:
-    inputs:
-      SOME_INPUT:
-        required: true
-        type: string
 
 jobs:
   build-application:
