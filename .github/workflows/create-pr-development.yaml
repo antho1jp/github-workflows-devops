@@ -1,8 +1,6 @@
 name: Creates a PR to the Development Branch
 
-on:
-  workflow_call:
-    inputs:
+on: workflow_call
 
 jobs:
   notify:
