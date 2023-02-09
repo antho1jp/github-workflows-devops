@@ -3,8 +3,9 @@ name: Create PR Main to Development (dispatcher)
 
 on: workflow_dispatch
 
+# this will create a pr from main to development branch
 jobs:
-  run-build:
+  create-pr:
     uses: ./.github/workflows/create-pr-development.yaml
     secrets: inherit
     with:

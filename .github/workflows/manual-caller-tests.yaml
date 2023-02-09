@@ -1,0 +1,9 @@
+# This example shows a Manual callable workflow through the Github UI
+name: Manually Run Tests (dispatcher)
+
+on: workflow_dispatch
+
+jobs:
+  run-tests:
+    uses: ./.github/workflows/run-tests.yaml
+    secrets: inherit

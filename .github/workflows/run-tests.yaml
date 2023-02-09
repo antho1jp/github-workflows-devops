@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  build-application:
+  run-test-job:
     runs-on: ubuntu-latest
     steps:
       - name: Mock Testing App Step
