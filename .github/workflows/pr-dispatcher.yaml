@@ -1,0 +1,12 @@
+name: Development/Main PR Dispatcher
+# This dispatcher triggers on pull request of Main/Development branch
+on:
+  pull_request:
+    branches:
+      - development
+      - main
+
+jobs:
+  run-build:
+    uses: ./.github/workflows/run-tests.yaml
+    secrets: inherit
