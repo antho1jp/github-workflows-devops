@@ -1,8 +1,7 @@
 # This blank workflow is placeholder for a build
 name: Build application example
 
-on:
-  workflow_call:
+on: workflow_call
 
 jobs:
   build-application:
