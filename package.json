@@ -1,0 +1,19 @@
+{
+  "name": "github-workflows-devops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antho1jp/github-workflows-devops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antho1jp/github-workflows-devops/issues"
+  },
+  "homepage": "https://github.com/antho1jp/github-workflows-devops#readme"
+}
