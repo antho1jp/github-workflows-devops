@@ -4,6 +4,6 @@ name: Manually Run Tests (dispatcher)
 on: workflow_dispatch
 
 jobs:
-  run-build:
+  run-tests:
     uses: ./.github/workflows/run-tests.yaml
     secrets: inherit
