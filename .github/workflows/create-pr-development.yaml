@@ -3,9 +3,6 @@ name: Creates a PR to the Development Branch
 on:
   workflow_call:
     inputs:
-      SOME_INPUT:
-        required: false
-        type: string
 
 jobs:
   notify:
