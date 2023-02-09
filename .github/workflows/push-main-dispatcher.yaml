@@ -7,7 +7,15 @@ on:
 
 jobs:
   create-pr-to-dev:
-    uses: antho1jp/github-workflows-devops/.github/workflows/create-pr-development.yaml@development
+    uses: ./.github/workflows/create-pr-development.yaml
     secrets: inherit
     with:
       SOME_INPUT: "Test Var Passing Data"
+
+  run-tests:
+    needs:
+      - create-pr-to-dev
+    uses: antho1jp/github-workflows-devops/.github/workflows/run-tests.yaml@development
+    secrets: inherit
+    with:
+      SOME_INPUT: "Test var passing"
