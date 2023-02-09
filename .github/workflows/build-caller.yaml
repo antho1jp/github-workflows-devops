@@ -7,5 +7,3 @@ jobs:
   run-build:
     uses: ./.github/workflows/build.yaml
     secrets: inherit
-    with:
-      SOME_INPUT: "Test Var Passing Data"
